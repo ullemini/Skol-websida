@@ -26,12 +26,22 @@
 <nav>
 <a href="{base}/">Hem</a>
 <a href="{base}/photoapp">Photo App</a>
+<a href="{base}/register">Register</a>
 </nav>
 
 <style>
 	nav{
 		text-align: center;
 	}
+	
+	:global(body), :global(html){
+	margin: 0%;
+	padding: 0%;
+	height: 100vh;
+	width: 100vw;
+	}    
+	
+
 </style>
 
 <slot />
