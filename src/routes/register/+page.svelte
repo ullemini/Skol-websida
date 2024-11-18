@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     let color_value = "black"
     let name_value=""
     let email_value =""
@@ -39,6 +40,7 @@
             
             <input type="submit" value="Registrera" style="color: white;">
         </form>
+        <h2>Har du redan ett konto? <a href="{base}/login">Logga in!</a></h2>
     </div>
 </main>
 
