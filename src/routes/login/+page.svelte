@@ -1,13 +1,35 @@
 
 <script>
     import { base } from '$app/paths';
+    import { onMount } from 'svelte';
+    import {users_store} from "$lib/user";
 
-    let name_value="Temp"
+    let users = []
     let email_value =""
     let password_value =""
-    
+    onMount(() => {
+        if($users_store.length > 2){
+            users = JSON.parse($users_store);
+        }
+    });
+
     function handleSubmit(){
-        alert("Välkommen "+ name_value +"!\n"+ "Credentials:\n"+"   Email: " + email_value +"\n"+ "   Password: " + password_value )
+
+        if (email_value == ""){
+            alert("no email inputed")
+            return
+        } 
+        
+        let user_ = users.filter(user => user.email == email_value && user.password == password_value)
+        if (user_.length>1){
+            alert("WARNIG: more than one accont, contact support! ")
+            return
+        }
+        if (user_.length>0){
+            alert("Välkommen "+ user_[0].email +"!\n"+ "Credentials:\n"+"   Email: " + email_value +"\n"+ "   Password: " + password_value )
+        } else {
+            alert("no accout whith that email exists or wrog pasowrd")
+        }
     }
 </script>
 <main>

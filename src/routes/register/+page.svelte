@@ -1,5 +1,10 @@
 <script>
     import { base } from '$app/paths';
+    import { onMount } from 'svelte';
+    import {users_store} from "$lib/user";
+	
+    let users = [];
+
     let color_value = "black"
     let name_value=""
     let email_value =""
@@ -15,9 +20,28 @@
         {namn:"grey",value: "grey"},
         ]
 
+        
+    onMount(() => {
+        /*Check if has more then 2 characters*/
+        if($users_store.length > 2){
+            users = JSON.parse($users_store);
+        }
+    });
+
     
+
     function handleSubmit(){
-        alert("Välkommen "+ name_value +"!\n"+ "Credentials:\n collor: "+color_value+ "\n   Email: " + email_value +"\n"+ "   Password: " + password_value )
+        let new_user ={name:name_value,password:password_value,email: email_value, color: color_value};
+        if (new_user.email == ""){
+            alert("no email")
+        } else if (users.filter(user => new_user.email == user.email).length >0){
+            alert("Email "+ new_user.email+ " allreddy has a account assiged" +"\n")
+            
+        } else {
+            users = [...users, new_user];
+            $users_store = JSON.stringify(users);
+            alert("Välkommen "+ name_value +"!\n"+ "Credentials:\n collor: "+color_value+ "\n   Email: " + email_value +"\n"+ "   Password: " + password_value +"\n"+$users_store)
+        }
     }
 </script>
 <main>
