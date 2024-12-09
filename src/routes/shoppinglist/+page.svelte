@@ -21,11 +21,11 @@
         varor = varor
     }
     function change_item_priorety(i,prio_change=1){
-        
+        if (!i || i+prio_change >= varor.length){alert(" ")} else {
         let temp_to = varor[i+prio_change]
-        let temp_from = varor.splice(i,1,temp_to)
-        varor.splice(i+prio_change,1,temp_from)
-
+        varor[i+prio_change] = varor[i]
+        varor[i] = temp_to
+        }
         varor = varor
         
     }
@@ -42,7 +42,7 @@
                 {#each varor as vara,i }
                 {#if vara.köpt == false}
                     <li transition:fade>
-                        {vara.name} <button transition:fade on:click={()=>remove(i)}>X</button> <button on:click={()=>switch_list(i)}>&gt</button> <button on:click={()=>change_item_priorety(i,1)}>&uparrow;</button>
+                        {vara.name} <button transition:fade on:click={()=>remove(i)}>X</button> <button on:click={()=>switch_list(i)}>&gt</button> <button on:click={()=>change_item_priorety(i,-1)}>&uparrow;</button> <button on:click={()=>change_item_priorety(i,1)}>&downarrow;</button>
                     </li>
                 {/if}
                 {/each}
@@ -54,7 +54,7 @@
                 {#each varor as vara,i}
                 {#if vara.köpt == true }
                     <li transition:fade>
-                        {vara.name} <button  on:click={()=>remove(i)}>X</button><button on:click={()=>switch_list(i)}>&lt</button> <button on:click={()=>change_item_priorety(i,1)}>&uparrow;</button>
+                        {vara.name} <button  on:click={()=>remove(i)}>X</button><button on:click={()=>switch_list(i)}>&lt</button> <button on:click={()=>change_item_priorety(i,-1)}>&uparrow;</button> <button on:click={()=>change_item_priorety(i,1)}>&downarrow;</button>
                     </li>
                     {/if}
                 {/each}
