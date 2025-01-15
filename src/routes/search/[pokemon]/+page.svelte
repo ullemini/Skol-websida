@@ -1,27 +1,36 @@
-<script>
+<script >
 	import { onMount } from 'svelte';
 
     /** @type {import('./$types').PageData} */
     export let data;
-    let key_list = []
+    let data_list = []
     /* shuld contain keyName */
     function SesionStore(_data){
-        key_list.push(_data)
-        sessionStorage.setItem('latest', JSON.stringify(key_list));
+        
+        data_list.push(_data.response)
+        sessionStorage.setItem('latest', JSON.stringify(data_list));
         
     }
 
     function SesionLoad(){
-        key_list = JSON.parse( sessionStorage.getItem('latest'))
+        let _temp = sessionStorage.getItem('latest')??"[]"
+        if (_temp.length > 2){
+            data_list = JSON.parse(_temp)
+        }
+         
+        console.log("session", data_list)
+        
     }
     
     onMount(
-        ()=>SesionLoad(),
-        ()=>SesionStore(data)
+        ()=>{
+            SesionLoad();
+            SesionStore(data)
+        }
     )
 
 </script>
-  
+
 {#await data}
     <p>.. waiting</p>
 {:then pokemon } 
@@ -38,15 +47,9 @@
     <section>
         <h1>{pokemon.response.moves[0].move.name}</h1>
     </section>
-  
 {/await}  
 
-<footer>
-    {#each key_list as _key}
-        <h1>{_key}</h1>
-    {/each}
-    
-</footer>
+
 
 <style>
     article{
@@ -55,9 +58,6 @@
         height: 30%;
         gap: 1em;
     }
-    footer{
-        width: 100%;
-        bottom: 0;
-    }
+    
 
 </style>

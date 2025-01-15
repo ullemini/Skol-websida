@@ -7,7 +7,7 @@
     let chats = []
     let chat = [{ user: 'Eliza', message: eliza.getInitial() }];
 
-
+    
     
     onMount(() => {
         /*Check if has more then 2 characters*/
