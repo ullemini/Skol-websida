@@ -12,17 +12,15 @@
             if (_data.response.name == data_list[index].name ){
                 data_list.splice(index,1)  
             }                
-
         }
 
         if (data_list.length >= 5){
             data_list.shift()
-            data_list = data_list
+            
         }
         
-
         data_list.push(_data.response)
-
+        data_list = data_list
         
         sessionStorage.setItem('latest', JSON.stringify(data_list));
         
