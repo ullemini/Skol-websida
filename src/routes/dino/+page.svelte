@@ -15,7 +15,7 @@
     const JUMP_HIGHT = 80
     let intervalId
     let game_loop
-    
+    let enemy_spawner
     
     onMount(()=>{
         screen_whith = document.documentElement.clientWidth
@@ -32,24 +32,39 @@
         if (top >= 300){
             top = 300
         }
+        let index = 0
+        let remove = -1
         for (let enemy of enemy_list) {
             if (enemy.left > 0){
                 enemy.left -= 1
             }
             else
-                enemy.left = screen_whith
+                remove = index
+
 
             
             if ((left < enemy.left+25 && left +50 > enemy.left)  && enemy.top<=top+50){
                 console.log("colided",left ,enemy.left+25 ,left +50 ,enemy.left )
                 alive = false
-                
+                clearInterval(enemy_spawner)
                 clearInterval(game_loop)
-                
+                enemy_list = []
             }   
+
+            index++
         }
+        if (remove>-1)
+            enemy_list.splice(remove,1)
         enemy_list = enemy_list
     },6)
+    enemy_spawner = setInterval(()=>{
+        if(enemy_list.length >= 10){} else{
+            
+        setTimeout(spawn_enemy(),Math.round(Math.random()*800))
+        
+        }
+        
+    },2000)
     }
     
     function onKeyDown(e) {
@@ -60,7 +75,9 @@
             if(e.keyCode==69){
                 spawn_enemy()
             }
-            
+            if (e.keyCode == 70){
+                top = 200
+            }
         } 
     }
     function jump(){

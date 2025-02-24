@@ -33,13 +33,18 @@
 <a href="{base}/chat">Chat</a>
 <a href="{base}/search">Search</a>
 <a href="{base}/ux-login">ux-login</a>
+<a href="{base}/bokhandel">Bokhandel</a>
 </nav>
 
 <style>
 	nav{
 		text-align: center;
 	}
-	
+	a{
+		margin-right: 1px;
+		margin-left: 1px;
+	}
+
 	:global(body), :global(html){
 	margin: 0%;
 	padding: 0%;
