@@ -121,13 +121,6 @@
         display: flex;
         flex-direction: column;
         position: fixed;
-        right: 1vw;
-        top: 32px;
-        min-width: 250px;
-        min-height: 200px;
-        padding: 6px;
-        padding-left: 7px;
-        border-width: 3px;
         background-image: url("https://clipart-library.com/images/BTar774Ec.png");
         background-size: cover;
         background-color: #d9bda5;
@@ -138,16 +131,13 @@
     }
     .korg button {
         color:rgb(255, 242, 224);
+        
     }
     .korg h2{
         font-size: larger;
     }
     main{
         display: grid;
-        width: 90%;
-        margin-top: 40px;
-        margin-left: 3%;
-        margin-right: 6%;
         background: none;
        
     }
@@ -197,18 +187,65 @@
         main{
             grid-template-columns:repeat(3, 1fr);
         }
+        .korg{
+            right: 1vw;
+            top: 32px;
+            min-width: 250px;
+            min-height: 200px;
+            padding: 6px;
+            padding-left: 7px;
+            border-width: 3px;
+        }
     }
     @media only screen 
     and (min-width:500px)
     and (max-width: 900px){
         main{
             grid-template-columns:repeat(2, 1fr);
+            width: 90%;
+            margin-top: 40px;
+            margin-left: 3%;
+            margin-right: 6%;
+        }
+        .korg{
+            right: 1vw;
+            top: 32px;
+            min-width: 250px;
+            min-height: 200px;
+            padding: 6px;
+            padding-left: 7px;
+            border-width: 3px;
         }
     }
     @media only screen 
     and (max-width: 500px){
         main{
             grid-template-columns:repeat(1, 1fr);
+            width: 94%;
+            margin-top: 40px;
+            margin-left:2%;
+            margin-right: 2%;
+        }
+        .korg{
+            right: 1vw;
+            top: 35px;
+            vertical-align:top;
+            min-width: 100%;
+            height: 93%;
+            padding: 6px;
+            padding-top: 30px;
+            padding-left: 7px;
+            border-width: 3px;
+            
+        }
+        .korg h2{
+            font-size: x-large;
+    
+            margin-bottom: 10px;
+        }
+        .korg tr button {
+            margin-left: 10px;
+            font-size: large;
         }
     }
 </style>
