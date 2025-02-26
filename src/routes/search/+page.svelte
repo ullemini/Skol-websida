@@ -1,10 +1,7 @@
-
-
 <script>
     import { goto } from "$app/navigation";
     import { onMount } from 'svelte';
     import { base } from "$app/paths";
-	import { updated } from "$app/stores";
 	
     
     let search
@@ -47,7 +44,7 @@
 </script>
 
 
-<form on:submit|preventDefault={()=> goto({base}+'/search/'+search.toLowerCase())}>
+<form on:submit|preventDefault={()=> goto(base+'/search/'+search.toLowerCase())}>
     <input type="text" placeholder="Sök upp en pokemon" bind:value={search} />
 </form>
 
