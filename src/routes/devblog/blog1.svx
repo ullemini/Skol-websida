@@ -1,0 +1,27 @@
+---
+title: "blog 1"
+date: "2025-04-09"
+---
+
+# 
+## Description
+
+Jag har kollat upp olika sätt att spela upp ljud i en browser.
+Jag hittade flera olika sidor som beskrev hur man gorde aoudio i html:
+<br>
+"HTML Audio Tag: Syntax, Usage, and Examples" från mimo [link](https://mimo.org/glossary/html/audio-tag)
+<br>
+The Embed Audio elementfrån mozilla [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
+<br>
+Att bara använda aoudio html tagen för att spela ljud upp skulle inte fungera för mig eftersom 
+
+Till slut hittade jag 
+["Web Audio API"](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+som lädde mig Till artikeln
+["Using the Web Audio API"](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+<br>
+Jag tästatde ochså att använda Aoudio() i javascript med
+[tutorial](https://www.youtube.com/watch?v=YtrSp08rzxc)
+och en väldigt informativ 
+[tutorial 2](https://www.youtube.com/watch?v=VXWvfrmpapI)
+som jag inte har hunnigt se mer än 10 min på
