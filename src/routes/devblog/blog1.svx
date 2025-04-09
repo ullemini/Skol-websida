@@ -3,8 +3,7 @@ title: "blog 1"
 date: "2025-04-09"
 ---
 
-# 
-## Description
+# Den första bloggen
 
 Jag har kollat upp olika sätt att spela upp ljud i en browser.
 Jag hittade flera olika sidor som beskrev hur man gorde aoudio i html:
