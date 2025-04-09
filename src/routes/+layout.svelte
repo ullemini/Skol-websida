@@ -34,6 +34,7 @@
 <a href="{base}/search">Search</a>
 <a href="{base}/ux-login">ux-login</a>
 <a href="{base}/bokhandel">Bokhandel</a>
+<a href="{base}/devblog">Devblog</a>
 </nav>
 
 <style>
