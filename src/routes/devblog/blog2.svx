@@ -1,0 +1,12 @@
+---
+title: "blog 2"
+date: "2025-04-23"
+---
+
+# Hard documentaion...
+
+Jag började med att försöka skapa en egen på/av knapp för musiken men komm på att det inte är vad jag borde fokusera på
+
+Jag har lärt mig om [AnalyserNode](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode)
+ och hur man [Using Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+jag har bestämt mig för att använda [Visualizations_with_Web_Audio_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) och [en blogg](https://www.kylehall.dev/posts/making-an-audio-visualiser-pt-1/) som bas/insperation
