@@ -1,0 +1,18 @@
+---
+title: "Blog 3"
+date: "2025-05-14"
+---
+
+# refactor to be able to create settings 
+
+I have now refactored to accually used [Bind:this](https://svelte.dev/docs/svelte/bind#bind:this) that i mentioned last time. I did this so all code wasent in the onmount() witch prevented me from accsessing variebles in functions (i had defined them in the onmunt).
+
+I have also started making a way to change the ffsise (used to get sample rate) 
+
+
+## Changes
+
+- moved out syle1() from onmove and renamed to visulizerStyleBar()
+- moved a lot of variebles out of onmove
+- crated changeffsise()   (uncomplete)
+- added new skeleton segment 

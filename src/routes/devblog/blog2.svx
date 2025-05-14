@@ -1,12 +1,26 @@
 ---
-title: "blog 2"
-date: "2025-04-23"
+title: "Blog 2"
+date: "2025-05-07"
 ---
+# Svår documentaion
 
-# Hard documentaion...
+Efter ett långt tag av sökande och letande i webdokumentationen och på gogel började med att bestämt mig för att använda [Visualizations_with_Web_Audio_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) och [en blogg av Kyle Hall](https://www.kylehall.dev/posts/making-an-audio-visualiser-pt-1/) som bas/insperation till min visualiser.
+I prossesen uptäckte och läste jag om, 
+[Using Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) vilket berättade om vart jag kunde hitta nästan alt jag behöver veta om ljud i javascript,
 
-Jag började med att försöka skapa en egen på/av knapp för musiken men komm på att det inte är vad jag borde fokusera på
 
-Jag har lärt mig om [AnalyserNode](https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode)
- och hur man [Using Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-jag har bestämt mig för att använda [Visualizations_with_Web_Audio_API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) och [en blogg](https://www.kylehall.dev/posts/making-an-audio-visualiser-pt-1/) som bas/insperation
+<br>
+
+Efter många om och men, fixande av buggar mm lyckades jag få visualisern att fungera 
+
+I prossesen lärde jag mig mer om sveltes [Bind:this](https://svelte.dev/docs/svelte/bind#bind:this) vilket kan användas för att komma åt html element fån DOM. Jag använde aldig den men kommer vara användbart att veta om.
+
+Senare jorde jag ett nytt system för att kunna byta visualiser i draw loopen och använde en skeleton Segment Control för att kontrollera det. 
+<br>
+
+## Changes
+
+Ändingar som gorts i denna veson:
+- Bar visulizer tillagd (följde [Visualizations with Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) ) 
+- Segment Control för att byta/stäga av visualisern
+

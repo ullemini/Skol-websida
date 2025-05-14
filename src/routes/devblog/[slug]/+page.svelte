@@ -9,9 +9,3 @@
     <p>Published: {data.date}</p>
     <svelte:component this={data.content} />
 </article>
-
-<style>
-    a {
-        color: aqua;
-    }
-</style>

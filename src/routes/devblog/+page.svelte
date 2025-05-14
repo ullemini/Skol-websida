@@ -1,7 +1,7 @@
 <!-- src/routes/devblog/+page.svelte -->
 <script>
 	export let data;
-  import { base } from '$app/paths';
+	import { base } from '$app/paths';
 </script>
 
 <h1>Devblog</h1>
