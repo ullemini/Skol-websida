@@ -1,0 +1,15 @@
+---
+title: "Blog 4"
+date: "2025-05-28"
+---
+
+# The visulizer is complete!
+
+Sen sist har jag:  
+ - refactored mycket saker
+ - lagt till en ny visulizer style
+ - Lagt till så (mästa av) Ui kan bli gömnt (med skeleton Switch)
+ - La till File upload och refactord så de skulle vara möjligt
+ - La till att file upload kan gömmas separat (med skeleton Switch)
+ - Keybind (p) för att pausa/starta musiken
+ - OnDestroy() för att properly stänga ned eventlsneners och draw loop när man byter sida
